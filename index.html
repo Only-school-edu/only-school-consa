@@ -601,7 +601,7 @@ function checkQuiz(subject) {
   const fbEl = document.getElementById(`quiz-${subject}-feedback`);
   fbEl.style.display = 'block';
   
-  fbEl.innerHTML = `<div class="quiz-feedback ${isRight?'correct-fb':'wrong-fb'}"><span class="fb-icon">${isRight?'🎯':'💡'}</span><div class="fb-text"><div class="font-extrabold text-gray-900 mb-1">Відповідь: ${correct}</div><div>${lifehack}</div></div></div>`;
+  fbEl.innerHTML = `<div class="quiz-feedback ${isRight?'correct-fb':'wrong-fb'}"><span class="fb-icon">${isRight?'🎯':'💡'}</span><div class="fb-text"><div class="font-extrabold text-gray-900 mb-1">Відповідь: ${({A:'А',B:'Б',C:'В',D:'Г'})[correct]}</div><div>${lifehack}</div></div></div>`;
   
   document.getElementById(`quiz-${subject}-btn`).disabled = true;
 }
