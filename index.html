@@ -1164,7 +1164,7 @@ async function exportPdf() {
     addLinkAnnotation(page, margin, y-dbH, pageW-2*margin, dbH, 'https://testportal.gov.ua/programy-nmt/');
     y -= dbH + 26;
 
-    /* ── Методика курсу ONLY-КУРС (у стилі бренду, оранжева гама) ── */
+    /* ── Методика курсу ШЛЯХ ДО МРІЇ (у стилі бренду, оранжева гама) ── */
     const leftW = (pageW-2*margin)*0.42;
     const rightX = margin + leftW + 10;
     const rightW = pageW - 2*margin - leftW - 10;
@@ -1185,8 +1185,8 @@ async function exportPdf() {
     drawRoundedRect(margin, y-courseH, pageW-2*margin, courseH, 16, { color: subjectBg[1] });
 
     // Ліва колонка: заголовок + опис + пігулка-посилання (по центру відносно висоти блока)
-    const kursTitle = 'ONLY-КУРС';
-    const kursDescLines = wrapText('комплексна підготовка з системою циклічного повторення та контролю прогресу', font, 9.5, leftW-40);
+    const kursTitle = 'ШЛЯХ ДО МРІЇ';
+    const kursDescLines = wrapText('курс комплексної підготовки з системою циклічного повторення та контролю прогресу', font, 9.5, leftW-40);
     const pillText2 = 'яка методика навчання?';
     const pillW2 = textWidth(pillText2,9,true) + 44;
     const pillH2 = 30;
